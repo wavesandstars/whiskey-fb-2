@@ -2,19 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import { FirebaseAppProvider, AuthCheck } from 'reactfire';
-import { Home, Cars, Contact, About } from './components'   //add cars here 
+import { Home, Cars, Contact, About } from './components'  
 import './styles.css'
 // import { firebaseConfig } from './firebaseConfig'
 // import 'firebase/auth';
-// import { Provider } from 'react-redux';
-// import { store } from './redux/store'
+import { Provider } from 'react-redux';
+import { store } from './redux/store'
 
 const temp_props = "Dream Car Sales"
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <FirebaseAppProvider firebaseConfig={firebaseConfig} suspense={true}>
-    <Provider store={store}> */}
+    {/* <FirebaseAppProvider firebaseConfig={firebaseConfig} suspense={true}> */}
+    <Provider store={store}>
     <Router>
       <Switch>
 
@@ -35,8 +35,8 @@ ReactDOM.render(
 
       </Switch>
     </Router>
-    {/* </Provider>
-    </FirebaseAppProvider> */}
+    </Provider>
+    {/* </FirebaseAppProvider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
