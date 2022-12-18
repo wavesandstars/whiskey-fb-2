@@ -16,7 +16,7 @@ const rootSlice = createSlice({
     }
 })
 
-// Export Reducer
+
 export const reducer = rootSlice.reducer;
 export const { chooseMake, chooseModel, chooseYear } = rootSlice.actions;
 

@@ -38,10 +38,11 @@ export const ContactForm = (props:ContactFormProps) => {
         } else {
            
             dispatch(chooseMake(data.make));
-            dispatch(chooseModel(data.Model));
+            dispatch(chooseModel(data.model));
             dispatch(chooseYear(data.year));
             server_calls.create(store.getState());
             setTimeout( () => {window.location.reload()}, 1000)
+            
         }
     }
 
