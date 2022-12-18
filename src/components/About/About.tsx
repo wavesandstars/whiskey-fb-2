@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar } from '../Navbar';
 import { makeStyles } from '@material-ui/core';
-import Digits from '../../assets/images/james-wainscoat-yEW23jxVsNI-unsplash (1).jpg'
+import Digits from '../../assets/images/adam-jaime-dmkmrNptMpw-unsplash.jpg'
 
 
 const useStyles = makeStyles({
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
         color: 'white',
         lineHeight: "24px",
     },
-    chicken: {
+    drink: {
         width: '50%',
         marginTop: '50px'
         
@@ -39,10 +39,8 @@ export const About = () => {
             <Navbar />
             <div className={`${classes.background}`}>
             <div className={classes.main_text}>
-            We carry the widest selection of cars imported from all over the world. <br></br>
-            We have all your dreams cars available for purchase in our lots or we can arrange a custom order! <br></br>
-            Chicken Tax - No more! <br></br>
-            <img  className = {classes.chicken} src={Digits} alt= 'chicken'/>
+            World's #1 exporter of any whiskey you can imagine! <br></br>
+            <img  className = {classes.drink} src={Digits} alt= 'drink'/>
 
             
             </div>

@@ -13,9 +13,12 @@ import { ContactForm } from '../ContactForm';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 90, hide: true },
-    { field: 'make', headerName: 'Make', flex: 1 },
-    { field: 'model', headerName: 'Model', flex: 1 },
+    { field: 'brand', headerName: 'Brand', flex: 1 },
+    { field: 'country', headerName: 'country', flex: 1 },
     { field: 'year', headerName: 'Year', flex: 1 },
+    { field: 'flavor', headerName: 'Flavor', flex: 1 },
+    { field: 'price', headerName: 'Price', flex: 1 },
+
   
 ];
 
@@ -49,7 +52,7 @@ export const DataTable = () => {
 
     return (
         <div style={{ height: 400, width: '100%' }}>
-            <h2>My Cars</h2>
+            <h2>My Whiskey</h2>
 
         <DataGrid rows={ contactData } columns={ columns } pageSize={ 5 } checkboxSelection={true} 
         onSelectionModelChange={ (item) => {
@@ -63,9 +66,9 @@ export const DataTable = () => {
 
        
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-            <DialogTitle id="form-dialog-title">Update Car {selectionModel}</DialogTitle>
+            <DialogTitle id="form-dialog-title">Update Whiskey {selectionModel}</DialogTitle>
             <DialogContent>
-                <DialogContentText>Update Car</DialogContentText>
+                <DialogContentText>Update Whiskey</DialogContentText>
                     <ContactForm id={selectionModel!}/>
             </DialogContent>
             <DialogActions>

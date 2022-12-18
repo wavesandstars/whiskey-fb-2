@@ -29,10 +29,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import clsx from 'clsx';
 import { RouteComponentProps, withRouter, Switch, Route } from "react-router-dom";
-import { DataTable } from '../../components/DataTable';
+import { DataTable } from '../DataTable';
 import { ContactForm } from '../ContactForm'
 
-interface CarProps{
+interface DrinkProps{
     history: RouteComponentProps["history"];
     location: RouteComponentProps['location'];
     match: RouteComponentProps['match'];
@@ -155,7 +155,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 }))
 
 
-export const Cars = withRouter(( props:CarProps ) => {
+export const Drinks = withRouter(( props:DrinkProps ) => {
     console.log(props);
     const { history } = props;
     const classes = useStyles();
@@ -207,13 +207,13 @@ export const Cars = withRouter(( props:CarProps ) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" className={classes.font} noWrap>
-                        My Cars
+                        My Whiskey
                     </Typography>
-                    <Button className={classes.toolbar_button} onClick={handleDialogClickOpen}>Create New Car</Button>
+                    <Button className={classes.toolbar_button} onClick={handleDialogClickOpen}>Create New Whiskey</Button>
 
                     
                     <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby="form-dialog-title">
-                        <DialogTitle id="form-dialog-title">Add New Car</DialogTitle>
+                        <DialogTitle id="form-dialog-title">Add New Whiskey</DialogTitle>
                         <DialogContent>
                             <DialogContentText></DialogContentText>
                             <ContactForm />

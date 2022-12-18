@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-import Digits from '../../assets/images/kevin-turcios-LBEU9vDEf1Q-unsplash.jpg';
+import Digits from '../../assets/images/robin-mcskelly-VyfllVu3BvI-unsplash.jpg';
 
 const useStyles = makeStyles({
     logo: {
@@ -79,7 +79,7 @@ export const Navbar = () => {
                 <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
                     <li>
                         <Button>
-                        <Link to='/Cars' className={`${classes.navbarItem} ${classes.psides}`}>My Cars</Link>
+                        <Link to='/Drinks' className={`${classes.navbarItem} ${classes.psides}`}>My Whiskey</Link>
                         </Button>
                     </li>
                     <li>

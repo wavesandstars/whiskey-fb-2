@@ -3,22 +3,28 @@ import { createSlice } from '@reduxjs/toolkit';
 const rootSlice = createSlice({
     name: "root",                     
     initialState: {
-        make: 'Make',
-        model: 'Model',
-        year: 'year',
+        brand: 'Brand',
+        country: 'Country',
+        year: 'Year',
+        flavor: 'Flavor',
+        price: 'Price',
+    
         
     },
     reducers: {
-        chooseMake: (state, action) => { state.make = action.payload},
-        chooseModel: (state, action) => { state.model = action.payload},
+        chooseBrand: (state, action) => { state.brand = action.payload},
+        chooseCountry: (state, action) => { state.country = action.payload},
         chooseYear: (state, action) => { state.year = action.payload},
+        chooseFlavor: (state, action) => { state.flavor = action.payload},
+        choosePrice: (state, action) => { state.price = action.payload},
+        
         
     }
 })
 
 
 export const reducer = rootSlice.reducer;
-export const { chooseMake, chooseModel, chooseYear } = rootSlice.actions;
+export const { chooseBrand, chooseCountry, chooseYear, chooseFlavor, choosePrice } = rootSlice.actions;
 
 
 
