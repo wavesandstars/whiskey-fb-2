@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     navbar: {
         backgroundColor: 'black',
         zIndex: 1,
-        borderBottom: '2px solid green',
+        
     },
     navbarItem: {
         color: 'white',

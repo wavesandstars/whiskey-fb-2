@@ -6,7 +6,7 @@ import Digits from '../../assets/images/adam-jaime-dmkmrNptMpw-unsplash.jpg'
 
 const useStyles = makeStyles({
     background: {
-        backgroundImage: `linear-gradient(#233329,#63D471, white)`,
+        backgroundImage: `linear-gradient(grey, white)`,
         width: '100%',
         height: '90%',
         backgroundPosition: 'center',

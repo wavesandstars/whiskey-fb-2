@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
     background: {
-        backgroundImage: `linear-gradient(#233329,#63D471, black)`,
+        backgroundImage: `linear-gradient(grey, black)`,
         width: '100%',
         height: '90%',
         backgroundPosition: 'center',
@@ -38,11 +38,11 @@ export const Contact = () => {
             <Navbar />
             <div className={`${classes.background}`}>
             <div className={classes.main_text}>
-            <h1>We're here for you</h1> <br></br>
+            <h1>Call us today or stop on by!</h1> <br></br>
             Find us at:  <br></br>
-            123 Hana Hwy<br></br>
-            Car City, USA <br></br>
-            555-555-5555  <br></br>
+            123  Whiskey Rd<br></br>
+            Beverage, USA <br></br>
+            555-222-2233  <br></br>
             Our Phone Lines are open 24/7. Even on Holidays!
             </div>
             </div>
