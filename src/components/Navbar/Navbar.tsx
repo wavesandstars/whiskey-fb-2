@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Digits from '../../assets/images/robin-mcskelly-VyfllVu3BvI-unsplash.jpg';
+import { GridLoadingOverlay } from '@material-ui/data-grid';
+import { AuthCheck } from 'reactfire';
+
+
 
 const useStyles = makeStyles({
     logo: {
         content: `url(${Digits})`,
-        maxWidth: '15%',
+        maxWidth: '10%',
         height: 'auto',
         border: 0,
         borderRadius: 7,
@@ -76,8 +80,19 @@ export const Navbar = () => {
                     </Link>
             </div>
             <div className={`${classes.width60} ${classes.alignCenter}`}>
-                <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
-                    <li>
+            <ul className={`${classes.ul} ${classes.row} ${classes.spaceBetween} ${classes.psides}`}>
+                    
+                    <Suspense fallback = {'loading...'}>
+                        <AuthCheck fallback ={
+
+                        <li>
+                      
+                        <Link to='/SignIn' className={`${classes.navbarItem} ${classes.psides}`}>Sign In</Link>
+                        
+                    </li>
+                        }>
+                   
+                   <li>
                         <Button>
                         <Link to='/Drinks' className={`${classes.navbarItem} ${classes.psides}`}>My Whiskey</Link>
                         </Button>
@@ -92,6 +107,8 @@ export const Navbar = () => {
                             <Link to='About' className={`${classes.navbarItem} ${classes.psides}`}>About Us</Link>
                         </Button>
                     </li>
+                    </AuthCheck>
+                    </Suspense>
                 </ul>
             </div>
         </div>
