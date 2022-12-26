@@ -2,7 +2,7 @@ let token = 'd0660ef9a696c0ec6ab9a95449c75cf4486941325379f24c';
 
 export const server_calls = {
     get: async () => {
-        const response = await fetch(`http://lean-wiggly-smell.glitch.me/api/whiskeys`,{
+        const response = await fetch(`https://lean-wiggly-smell.glitch.me/api/whiskeys`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ export const server_calls = {
     },
 
     create: async(data: any = {}) => {
-        const response = await fetch(`http://lean-wiggly-smell.glitch.me/api/whiskeys`,{
+        const response = await fetch(`https://lean-wiggly-smell.glitch.me/api/whiskeys`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export const server_calls = {
 		},
     
         update: async (id:string, data:any = {}) => {
-            const response = await fetch(`http://lean-wiggly-smell.glitch.me/api/whiskeys/${id}`, {
+            const response = await fetch(`https://lean-wiggly-smell.glitch.me/api/whiskeys/${id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export const server_calls = {
         },
     
         delete: async(id:string) => {
-            const response = await fetch(`http://lean-wiggly-smell.glitch.me/api/whiskeys/${id}`,{
+            const response = await fetch(`https://lean-wiggly-smell.glitch.me/api/whiskeys/${id}`,{
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
